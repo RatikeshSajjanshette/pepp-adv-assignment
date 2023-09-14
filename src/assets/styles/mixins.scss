@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+@mixin heading-1 {
+  font-family: $font-family;
+  font-size: 17px;
+  line-height: 23px;
+  font-weight: map-get($font-weight, "regular");
+}
+
+@mixin small-text {
+  font-family: $font-family;
+  font-size: 11px;
+  line-height: 15px;
+  font-weight: map-get($font-weight, "small");
+}
