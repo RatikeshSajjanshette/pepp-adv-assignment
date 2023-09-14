@@ -1,1 +1,16 @@
-<p>home works!</p>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div class="side-nav">
+
+    </div>
+
+  </mat-drawer>
+
+  <div class="home-main-container">
+    <app-header></app-header>
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+
+</mat-drawer-container>

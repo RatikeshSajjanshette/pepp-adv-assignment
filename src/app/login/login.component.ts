@@ -51,8 +51,13 @@ export class LoginComponent implements OnInit {
       if (this._helperService.validateUser(this.loginForm.value)) {
         this._router.navigateByUrl('home');
       } else {
-        console.log('Invalid user');
+        this._helperService.showSnackBar(
+          'Email or password is invalid',
+          'close'
+        );
       }
+    } else {
+      this._helperService.showSnackBar('Email or password is invalid', 'close');
     }
   }
 }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ILogin } from 'src/data-models/login-data-model';
 import { USER_CREDS } from 'src/user-data/user-cred';
 
@@ -6,7 +7,7 @@ import { USER_CREDS } from 'src/user-data/user-cred';
   providedIn: 'root',
 })
 export class HelperService {
-  constructor() {}
+  constructor(private _matSnackBar: MatSnackBar) {}
 
   validateUser(loginFormValues: ILogin) {
     if (
@@ -18,5 +19,13 @@ export class HelperService {
       return true;
     }
     return false;
+  }
+
+  showSnackBar(message: string, action: string) {
+    this._matSnackBar.open(message, action, {
+      duration: 1500,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+    });
   }
 }

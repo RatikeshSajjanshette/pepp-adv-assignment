@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins";
+
 .login-page-container {
   display: flex;
   width: 100%;
@@ -94,6 +95,7 @@
     color: $purple;
     .contact-support {
       text-decoration-line: underline;
+      cursor: pointer;
     }
   }
 }

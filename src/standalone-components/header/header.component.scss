@@ -1,0 +1,58 @@
+@import "variables";
+@import "mixins";
+
+.header-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border-bottom: 1px solid var(--Grey-300, #e0e0e0);
+  background: $white;
+  .side-nav {
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #efefef;
+    .bars-icon {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      padding: 6.75px 4.25px;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+  }
+  .brand-logo {
+    display: flex;
+    align-self: center;
+    height: 15px;
+    margin-left: 32px;
+  }
+  .user-logo {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    background: $pepper-red;
+    gap: 10px;
+    border-radius: 20px;
+    .user {
+      color: var(--White, #fff);
+      font-feature-settings: "clig" off, "liga" off;
+      font-family: Roboto;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px; /* 150% */
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "variables";
+@import "mixins";
+
+.side-nav{
+  display: inline-flex;
+  height: 669px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+  
+}
