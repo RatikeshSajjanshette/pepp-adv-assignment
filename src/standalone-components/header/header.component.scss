@@ -27,31 +27,47 @@
       cursor: pointer;
     }
   }
+  .logo-icon-container {
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    justify-content: space-between;
+    width: 94%;
+  }
   .brand-logo {
     display: flex;
     align-self: center;
     height: 15px;
-    margin-left: 32px;
+    margin-left: 20px;
   }
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .icon {
+      height: 14px;
+      width: 14px;
+    }
+  }
+
   .user-logo {
     display: flex;
-    width: 24px;
-    height: 24px;
-    padding: 10px;
-    margin-left: 20px;
+    width: 14px;
+    height: 14px;
+    padding: 4px;
     justify-content: center;
     align-items: center;
     background: $pepper-red;
     gap: 10px;
     border-radius: 20px;
     .user {
-      color: var(--White, #fff);
+      color: var(--White, $white);
       font-feature-settings: "clig" off, "liga" off;
       font-family: Roboto;
       font-size: 12px;
       font-style: normal;
       font-weight: 500;
-      line-height: 18px; /* 150% */
+      line-height: 18px;
       text-transform: uppercase;
     }
   }
