@@ -1,0 +1,67 @@
+@import "variables";
+@import "mixins";
+
+.card {
+  display: flex;
+  padding: 16px 0px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 5px;
+  border: 1px solid $strock-light;
+  background: $light-grey;
+
+  .thumbnail-container {
+    width: 4%;
+
+    .user-thumbnail {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 20px;
+      background: $pepper-red;
+      margin-left: 20px;
+
+      .thumbnail {
+        color: $white;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .rating {
+    width: 20%;
+  }
+
+  .feedback-message {
+    color: $black;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    width: 75%;
+  }
+
+  .date {
+    color: $typography-label;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-right: 16px;
+  }
+}

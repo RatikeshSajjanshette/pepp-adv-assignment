@@ -1,4 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import "mixins";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.side-navigation {
+  display: inline-flex;
+  height: 669px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+
+  .header {
+    display: flex;
+    width: 240px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    padding-bottom: 0px;
+  }
+
+  .vector-line {
+    width: 240px;
+    height: 0px;
+    stroke-width: 2px;
+    stroke: $dark-grey;
+    margin-bottom: 24px;
+  }
+
+  .menu {
+    display: flex;
+    padding: 0px 10px;
+    height: 46px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    border-left: 5px solid $pepper-red;
+    background: rgba(65, 25, 65, 0.3);
+    cursor: pointer;
+
+    .home {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

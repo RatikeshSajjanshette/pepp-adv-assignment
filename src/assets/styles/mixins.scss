@@ -7,6 +7,23 @@
   font-weight: map-get($font-weight, "regular");
 }
 
+@mixin heading-2 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: map-get($font-weight, "regular");
+  line-height: 24px;
+}
+@mixin large-text {
+  color: $white;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
 @mixin small-text {
   font-family: $font-family;
   font-size: 11px;

@@ -1,16 +1,37 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
-    <div class="side-nav">
-
+    <div class="side-navigation">
+      <div class="header">
+        <div>
+          <img src="assets/Icons/brand-logo.svg" />
+        </div>
+        <div style="cursor: pointer" (click)="drawer.toggle()">
+          <img src="assets/Icons/cancel-icon.svg" />
+        </div>
+      </div>
+      <div class="vector-line"><img src="assets/Icons/vector_line.svg" /></div>
+      <div class="menu">
+        <span><img src="assets/Icons/home.svg" /></span>
+        <span class="home">Home</span>
+      </div>
     </div>
-
   </mat-drawer>
-
-  <div class="home-main-container">
-    <app-header></app-header>
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
+  <div class="home-container">
+    <app-header (showSideBarEvent)="drawer.toggle()"></app-header>
+    <div class="feedback-container">
+      <div class="greeting">Welcome Back User 01!</div>
+      <div class="table-header">
+        <span class="list-text">Feedback List</span>
+        <div class="add-button" (click)="navigateToAddNewFeedbackForm()">
+          <span class="add-new">+ Add New</span>
+        </div>
+      </div>
+      <div class="table">
+        <ng-container *ngFor="let feedback of feedbackCollection">
+          <app-feedback-card [feedbackData]="feedback" class="feedback-card">
+          </app-feedback-card>
+        </ng-container>
+      </div>
+    </div>
   </div>
-
 </mat-drawer-container>
